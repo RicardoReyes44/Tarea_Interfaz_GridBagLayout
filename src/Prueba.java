@@ -2,6 +2,10 @@ import javax.swing.*;
 
 class Interfaz{
 	
+	public Interfaz() {
+		
+	}
+	
 }
 
 

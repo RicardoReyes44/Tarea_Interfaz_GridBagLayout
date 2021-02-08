@@ -1,9 +1,9 @@
 import javax.swing.*;
 
-class Interfaz{
+class Interfaz extends JFrame{
 	
 	public Interfaz() {
-		
+
 	}
 	
 }

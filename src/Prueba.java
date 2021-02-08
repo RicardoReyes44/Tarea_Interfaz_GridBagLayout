@@ -7,6 +7,7 @@ class Interfaz extends JFrame{
 	GridBagConstraints gbc = new GridBagConstraints();
 	
 	public Interfaz() {
+
 		getContentPane().setLayout(gbl);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setTitle("GridBagLayout_Trabajo");
@@ -16,7 +17,7 @@ class Interfaz extends JFrame{
 		establecerPosicion(0, 0, 1, 1, lbl1, 0);
 
 		JLabel lbl2 = new JLabel("this list");
-		establecerPosicion(0, 1, 1, 1, lbl2, 0);
+		establecerPosicion(0, 1, 1, 1, lbl2, 1);
 
 		pack();
 		setLocationRelativeTo(null);
@@ -30,7 +31,7 @@ class Interfaz extends JFrame{
 		gbc.gridwidth = width;
 		
 		if(relleno!=0){
-			gbc.fill = relleno;
+			gbc.fill = GridBagConstraints.HORIZONTAL;
 		}
 		
 		gbl.setConstraints(componente, gbc);

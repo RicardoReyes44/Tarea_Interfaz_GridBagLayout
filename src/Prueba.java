@@ -12,6 +12,12 @@ class Interfaz extends JFrame{
 		setTitle("GridBagLayout_Trabajo");
 		setVisible(true);
 
+		JLabel lbl1 = new JLabel("The Classic Form includes all visible fields");
+		establecerPosicion(0, 0, 1, 1, lbl1, 0);
+
+		JLabel lbl2 = new JLabel("this list");
+		establecerPosicion(0, 1, 1, 1, lbl2, 0);
+
 		pack();
 		setLocationRelativeTo(null);
 

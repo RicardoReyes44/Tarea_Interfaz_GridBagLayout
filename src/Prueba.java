@@ -64,6 +64,24 @@ class Interfaz extends JFrame{
 		JTextField txt = new JTextField(23);
 		establecerPosicion(0, 15, 1, 1, txt, null);
 		
+		JLabel lbl10 = new JLabel("");
+		establecerPosicion(0, 16, 1, 1, lbl10, new Dimension(20, 20));
+		
+		JLabel lbl11 = new JLabel("Enhance your from");
+		establecerPosicion(0, 17, 1, 1, lbl11, null);
+		
+		JCheckBox chk4 = new JCheckBox("enable evil popup mode");
+		establecerPosicion(0, 18, 1, 1, chk4, null);
+		
+		JCheckBox chk5 = new JCheckBox("disable all Javascript");
+		establecerPosicion(0, 19, 1, 1, chk5, null);
+		
+		JCheckBox chk6 = new JCheckBox("include archive link");
+		establecerPosicion(0, 20, 1, 1, chk6, null);
+		
+		JCheckBox chk7 = new JCheckBox("include MonkeyRewards link");
+		establecerPosicion(0, 21, 1, 1, chk7, null);
+		
 		pack();
 		setLocationRelativeTo(null);
 

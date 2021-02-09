@@ -93,12 +93,19 @@ class Interfaz extends JFrame{
 
 		JPanel panel = new JPanel();
 		panel.setBackground(new Color(240, 240, 240));
-    	panel.setLayout(gbl2);
+		panel.setLayout(gbl2);
+		panel.setAlignmentX(Component.LEFT_ALIGNMENT);
     	panel.setBorder(BorderFactory.createTitledBorder(""));
-    	panel.setPreferredSize(new Dimension(450, 220));
     	establecerPosicion(2, 1, 10, 1, panel, null);
     	
-
+    	JLabel lbl14 = new JLabel("Email Adress");
+    	establecerPosicion(panel, gbl2, gbc2, 0, 0, 1, 1, lbl14, null);
+    	
+    	JLabel lbl15 = new JLabel("First Name");
+    	establecerPosicion(panel, gbl2, gbc2, 0, 2, 1, 1, lbl15, null);
+    	
+    	JLabel lbl16 = new JLabel("Last Name");
+    	establecerPosicion(panel, gbl2, gbc2, 0, 4, 1, 1, lbl16, null);
 		
 		pack();
 		setLocationRelativeTo(null);
@@ -128,15 +135,11 @@ class Interfaz extends JFrame{
 		gbc2.gridheight = height;
 		gbc2.gridwidth = width;
 
-		if(padding!=null){
-			componente.setPreferredSize(padding);
-			gbc2.anchor = GridBagConstraints.SOUTHWEST;
-		}else {
-			gbc2.anchor = GridBagConstraints.WEST;
-		}
+		gbc2.anchor = GridBagConstraints.WEST;
 
 		gbl2.setConstraints(componente, gbc2);
 		panel.add(componente, gbc2);
+		pack();
 	}
 	
 }

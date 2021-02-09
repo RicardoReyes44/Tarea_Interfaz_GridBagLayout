@@ -32,6 +32,9 @@ class Interfaz extends JFrame{
 		JCheckBox chk = new JCheckBox("a little for your form");
 		establecerPosicion(0, 5, 1, 1, chk, 0, null);
 		
+		JTextField txt1 = new JTextField("Suscribe to our mailing list");
+		establecerPosicion(0, 6, 1, 1, txt1, 0, null);
+		
 		pack();
 		setLocationRelativeTo(null);
 

@@ -49,6 +49,12 @@ class Interfaz extends JFrame{
 		JLabel lbl7 = new JLabel("");
 		establecerPosicion(0, 10, 1, 1, lbl7, new Dimension(50, 50));
 		
+		JCheckBox chk2 = new JCheckBox("interest group fields");
+		establecerPosicion(0, 11, 1, 1, chk2, null);
+		
+		JCheckBox chk3 = new JCheckBox("required field indicators");
+		establecerPosicion(0, 12, 1, 1, chk3, null);
+		
 		pack();
 		setLocationRelativeTo(null);
 

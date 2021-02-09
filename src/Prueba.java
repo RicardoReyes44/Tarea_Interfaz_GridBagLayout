@@ -96,17 +96,29 @@ class Interfaz extends JFrame{
 		panel.setLayout(gbl2);
 		panel.setAlignmentX(Component.LEFT_ALIGNMENT);
     	panel.setBorder(BorderFactory.createTitledBorder(""));
-    	establecerPosicion(2, 1, 10, 1, panel, null);
+    	establecerPosicion(2, 1, 5, 1, panel, null);
     	
-    	JLabel lbl14 = new JLabel("Email Adress");
-    	establecerPosicion(panel, gbl2, gbc2, 0, 0, 1, 1, lbl14, null);
+    	JLabel lbl15 = new JLabel("");
+    	establecerPosicion(panel, gbl2, gbc2, 0, 0, 1, 1, lbl15, new Dimension(220, 202));
     	
-    	JLabel lbl15 = new JLabel("First Name");
-    	establecerPosicion(panel, gbl2, gbc2, 0, 2, 1, 1, lbl15, null);
+    	JLabel lbl16 = new JLabel("Email Adress");
+    	establecerPosicion(panel, gbl2, gbc2, 0, 1, 1, 1, lbl16, null);
     	
-    	JLabel lbl16 = new JLabel("Last Name");
-    	establecerPosicion(panel, gbl2, gbc2, 0, 4, 1, 1, lbl16, null);
-		
+    	JTextField txt2 = new JTextField(36);
+		establecerPosicion(panel, gbl2, gbc2, 0, 2, 1, 1, txt2, null);
+    	
+    	JLabel lbl17 = new JLabel("First Name");
+    	establecerPosicion(panel, gbl2, gbc2, 0, 3, 1, 1, lbl17, null);
+    	
+    	JTextField txt3 = new JTextField(36);
+		establecerPosicion(panel, gbl2, gbc2, 0, 4, 1, 1, txt3, null);
+    	
+    	JLabel lbl18 = new JLabel("Last Name");
+    	establecerPosicion(panel, gbl2, gbc2, 0, 5, 1, 1, lbl18, null);
+    	
+    	JTextField txt4 = new JTextField(36);
+		establecerPosicion(panel, gbl2, gbc2, 0, 6, 1, 1, txt4, null);
+	
 		pack();
 		setLocationRelativeTo(null);
 

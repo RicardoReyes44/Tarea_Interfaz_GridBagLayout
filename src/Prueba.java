@@ -1,8 +1,10 @@
 import java.awt.*;
 import java.awt.font.TextAttribute;
+import java.text.ParseException;
 import java.util.Map;
 
 import javax.swing.*;
+import javax.swing.text.MaskFormatter;
 
 class Interfaz extends JFrame{
 	
@@ -97,37 +99,63 @@ class Interfaz extends JFrame{
     	panel.setBorder(BorderFactory.createTitledBorder(""));
     	establecerPosicion(2, 1, 8, 1, panel, null);
     	
-    	JLabel lbl16 = new JLabel("Email Adress");
-    	establecerPosicion(panel, gbl2, gbc2, 0, 0, 1, 1, lbl16, null);
+    	JLabel lbl23 = new JLabel(" ");
+    	establecerPosicion(panel, gbl2, gbc2, 0, 0, 1, 1, lbl23, null);
     	
-    	JTextField txt2 = new JTextField(36);
-		establecerPosicion(panel, gbl2, gbc2, 0, 1, 1, 1, txt2, null);
+    	JLabel lbl16 = new JLabel("Email Adress");
+    	establecerPosicion(panel, gbl2, gbc2, 0, 1, 1, 1, lbl16, null);
+    	
+    	MaskFormatter formatter = null;
+    	try {
+    		formatter = new MaskFormatter("@gmail.com");
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	JFormattedTextField txtftf = new JFormattedTextField(formatter);
+    	establecerPosicion(panel, gbl2, gbc2, 0, 2, 1, 1, txtftf, null);
 		
 		JLabel lbl17 = new JLabel(" ");
-    	establecerPosicion(panel, gbl2, gbc2, 0, 2, 1, 1, lbl17, null);
+    	establecerPosicion(panel, gbl2, gbc2, 0, 3, 1, 1, lbl17, null);
     	
     	JLabel lbl18 = new JLabel("First Name");
-    	establecerPosicion(panel, gbl2, gbc2, 0, 3, 1, 1, lbl18, null);
+    	establecerPosicion(panel, gbl2, gbc2, 0, 4, 1, 1, lbl18, null);
     	
     	JTextField txt3 = new JTextField(36);
-		establecerPosicion(panel, gbl2, gbc2, 0, 4, 1, 1, txt3, null);
+		establecerPosicion(panel, gbl2, gbc2, 0, 5, 1, 1, txt3, null);
 		
 		JLabel lbl20 = new JLabel(" ");
-    	establecerPosicion(panel, gbl2, gbc2, 0, 5, 1, 1, lbl20, null);
+    	establecerPosicion(panel, gbl2, gbc2, 0, 6, 1, 1, lbl20, null);
     	
     	JLabel lbl19 = new JLabel("Last Name");
-    	establecerPosicion(panel, gbl2, gbc2, 0, 6, 1, 1, lbl19, null);
+    	establecerPosicion(panel, gbl2, gbc2, 0, 7, 1, 1, lbl19, null);
     	
     	JTextField txt4 = new JTextField(36);
-		establecerPosicion(panel, gbl2, gbc2, 0, 7, 1, 1, txt4, null);
+		establecerPosicion(panel, gbl2, gbc2, 0, 8, 1, 1, txt4, null);
 		
 		JLabel lbl21 = new JLabel(" ");
-    	establecerPosicion(panel, gbl2, gbc2, 0, 8, 1, 1, lbl21, null);
+    	establecerPosicion(panel, gbl2, gbc2, 0, 9, 1, 1, lbl21, null);
 
 		ImageIcon ic = new ImageIcon("./image/myimage.png");
     	JButton btnSubscribe = new JButton();
-    	establecerPosicion(panel, gbl2, gbc2, 0, 9, 1, 1, btnSubscribe, null);
+    	establecerPosicion(panel, gbl2, gbc2, 0, 10, 1, 1, btnSubscribe, null);
     	btnSubscribe.setIcon(new ImageIcon(ic.getImage().getScaledInstance(btnSubscribe.getWidth(), btnSubscribe.getHeight() ,Image.SCALE_SMOOTH)));
+    	
+    	JLabel lbl25 = new JLabel(" ");
+    	establecerPosicion(panel, gbl2, gbc2, 0, 11, 1, 1, lbl25, null);
+    	
+    	JLabel lbl22 = new JLabel("Copy/paste onto your site");
+    	establecerPosicion(2, 11, 1, 1, lbl22, null);
+    	
+    	JTextArea txtAPrimero = new JTextArea(10, 10);
+    	
+    	JScrollPane sp = new JScrollPane(txtAPrimero);
+    	gbc.fill = GridBagConstraints.BOTH;
+    	establecerPosicion(2, 12, 7, 1, sp, null);
+
+    	for(byte i=0; i<=100 ; i++) {
+    		txtAPrimero.insert("El scroll esta a la derecha\n", 0);
+    	}
 	
 		pack();
 		setLocationRelativeTo(null);

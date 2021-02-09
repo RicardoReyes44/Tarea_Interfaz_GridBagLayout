@@ -82,6 +82,21 @@ class Interfaz extends JFrame{
 		JCheckBox chk7 = new JCheckBox("include MonkeyRewards link");
 		establecerPosicion(0, 21, 1, 1, chk7, null);
 		
+		JLabel lbl12 = new JLabel("");
+		establecerPosicion(1, 0, 1, 1, lbl12, new Dimension(20, 20));
+		
+		JLabel lbl13 = new JLabel("Preview");
+		establecerPosicion(2, 0, 1, 1, lbl13, null);
+
+		JPanel panelIzq = new JPanel();
+		panelIzq.setBackground(new Color(240, 240, 240));
+    	panelIzq.setLayout(new FlowLayout());
+    	panelIzq.setBorder(BorderFactory.createTitledBorder(""));
+    	panelIzq.setPreferredSize(new Dimension(450, 220));
+    	establecerPosicion(2, 1, 10, 1, panelIzq, null);
+    	
+    	
+		
 		pack();
 		setLocationRelativeTo(null);
 

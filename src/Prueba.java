@@ -113,6 +113,7 @@ class Interfaz extends JFrame{
 			e.printStackTrace();
 		}
     	JFormattedTextField txtftf = new JFormattedTextField(formatter);
+    	txtftf.setPreferredSize(new Dimension(400, 25));
     	establecerPosicion(panel, gbl2, gbc2, 0, 2, 1, 1, txtftf, null);
 		
 		JLabel lbl17 = new JLabel(" ");

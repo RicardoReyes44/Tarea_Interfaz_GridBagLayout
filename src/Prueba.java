@@ -55,6 +55,15 @@ class Interfaz extends JFrame{
 		JCheckBox chk3 = new JCheckBox("required field indicators");
 		establecerPosicion(0, 12, 1, 1, chk3, null);
 		
+		JLabel lbl8 = new JLabel("");
+		establecerPosicion(0, 13, 1, 1, lbl8, new Dimension(40, 40));
+		
+		JLabel lbl9 = new JLabel("Set form width");
+		establecerPosicion(0, 14, 1, 1, lbl9, null);
+		
+		JTextField txt = new JTextField(23);
+		establecerPosicion(0, 15, 1, 1, txt, null);
+		
 		pack();
 		setLocationRelativeTo(null);
 

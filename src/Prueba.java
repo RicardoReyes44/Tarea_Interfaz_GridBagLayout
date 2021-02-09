@@ -16,7 +16,7 @@ class Interfaz extends JFrame{
 		setTitle("GridBagLayout_Trabajo");
 		setVisible(true);
 
-		JLabel lbl1 = new JLabel("The Classic Form includes all visible fields");
+		JLabel lbl1 = new JLabel("The Classic Form includes all visible fields for");
 		establecerPosicion(0, 0, 1, 1, lbl1, 0, null);
 
 		JLabel lbl2 = new JLabel("this list");
@@ -24,12 +24,13 @@ class Interfaz extends JFrame{
 
 		JLabel lbl3 = new JLabel("FROM OPTIONS");
 		int a[] = {40, 40};
-		establecerPosicion(0, 3, 1, 1, lbl3, 0, a);
+		establecerPosicion(0, 2, 2, 1, lbl3, 0, a);
 
 		JLabel lbl4 = new JLabel("Include following");
-		establecerPosicion(0, 5, 1, 1, lbl4, 0, null);
+		establecerPosicion(0, 4, 1, 1, lbl4, 0, null);
 		
-		
+		JCheckBox chk = new JCheckBox("a little for your form");
+		establecerPosicion(0, 5, 1, 1, chk, 0, null);
 		
 		pack();
 		setLocationRelativeTo(null);

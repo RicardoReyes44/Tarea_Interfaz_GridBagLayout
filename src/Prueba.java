@@ -87,15 +87,18 @@ class Interfaz extends JFrame{
 		
 		JLabel lbl13 = new JLabel("Preview");
 		establecerPosicion(2, 0, 1, 1, lbl13, null);
+		
+		GridBagLayout gbl2 = new GridBagLayout();
+		GridBagConstraints gbc2 = new GridBagConstraints();
 
-		JPanel panelIzq = new JPanel();
-		panelIzq.setBackground(new Color(240, 240, 240));
-    	panelIzq.setLayout(new FlowLayout());
-    	panelIzq.setBorder(BorderFactory.createTitledBorder(""));
-    	panelIzq.setPreferredSize(new Dimension(450, 220));
-    	establecerPosicion(2, 1, 10, 1, panelIzq, null);
+		JPanel panel = new JPanel();
+		panel.setBackground(new Color(240, 240, 240));
+    	panel.setLayout(gbl2);
+    	panel.setBorder(BorderFactory.createTitledBorder(""));
+    	panel.setPreferredSize(new Dimension(450, 220));
+    	establecerPosicion(2, 1, 10, 1, panel, null);
     	
-    	
+
 		
 		pack();
 		setLocationRelativeTo(null);
@@ -117,6 +120,23 @@ class Interfaz extends JFrame{
 
 		gbl.setConstraints(componente, gbc);
 		add(componente);
+	}
+	
+	public void establecerPosicion(JPanel panel, GridBagLayout gbl2, GridBagConstraints gbc2, int x, int y, int height, int width, Component componente, Dimension padding) {
+		gbc2.gridx = x;
+		gbc2.gridy = y;
+		gbc2.gridheight = height;
+		gbc2.gridwidth = width;
+
+		if(padding!=null){
+			componente.setPreferredSize(padding);
+			gbc2.anchor = GridBagConstraints.SOUTHWEST;
+		}else {
+			gbc2.anchor = GridBagConstraints.WEST;
+		}
+
+		gbl2.setConstraints(componente, gbc2);
+		panel.add(componente, gbc2);
 	}
 	
 }

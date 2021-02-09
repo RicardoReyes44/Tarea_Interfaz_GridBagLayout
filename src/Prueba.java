@@ -23,8 +23,7 @@ class Interfaz extends JFrame{
 		establecerPosicion(0, 1, 1, 1, lbl2, 1, null);
 
 		JLabel lbl3 = new JLabel("FROM OPTIONS");
-		int a[] = {40, 40};
-		establecerPosicion(0, 2, 2, 1, lbl3, 0, a);
+		establecerPosicion(0, 2, 2, 1, lbl3, 0,  new Dimension(100, 40));
 
 		JLabel lbl4 = new JLabel("Include following");
 		establecerPosicion(0, 4, 1, 1, lbl4, 0, null);
@@ -35,25 +34,28 @@ class Interfaz extends JFrame{
 		JTextField txt1 = new JTextField("Suscribe to our mailing list");
 		establecerPosicion(0, 6, 1, 1, txt1, 0, null);
 		
+		JRadioButton rb = new JRadioButton("only required fields");
+		establecerPosicion(0, 7, 1, 1, rb, 0, new Dimension(80, 80));
+		
+		JRadioButton rb2 = new JRadioButton("all fields");
+		establecerPosicion(0, 8, 1, 1, rb2, 0, null);
+		
 		pack();
 		setLocationRelativeTo(null);
 
 	}
 	
-	public void establecerPosicion(int x, int y, int height, int width, Component componente, int relleno, int[] padding) {
+	public void establecerPosicion(int x, int y, int height, int width, Component componente, int relleno, Dimension padding) {
 		gbc.gridx = x;
 		gbc.gridy = y;
 		gbc.gridheight = height;
 		gbc.gridwidth = width;
 		
-		if(relleno!=0){
-			gbc.fill = GridBagConstraints.HORIZONTAL;
-		}
-		
 		if(padding!=null){
-			componente.setPreferredSize(new Dimension(padding[0], padding[1]));
+			componente.setPreferredSize(padding);
 		}
 		
+		gbc.anchor = GridBagConstraints.WEST;
 		gbl.setConstraints(componente, gbc);
 		add(componente);
 	}
